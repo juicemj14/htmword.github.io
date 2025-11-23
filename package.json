@@ -1,0 +1,11 @@
+{
+  "name": "online-word",
+  "version": "0.1.0",
+  "description": "A small, static Word-like online text editor (demo)",
+  "scripts": {
+    "start": "http-server . -c-1 -p 8080"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

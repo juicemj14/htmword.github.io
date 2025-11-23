@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Online Word-like Editor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="toolbar" role="toolbar" aria-label="Editor toolbar">
+    <div class="group">
+      <button type="button" data-cmd="bold" title="Bold">B</button>
+      <button type="button" data-cmd="italic" title="Italic">I</button>
+      <button type="button" data-cmd="underline" title="Underline">U</button>
+      <button type="button" data-cmd="strikeThrough" title="Strike">S</button>
+    </div>
+
+    <div class="group">
+      <select id="fontName" title="Font">
+        <option value="Arial">Arial</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Segoe UI">Segoe UI</option>
+      </select>
+      <select id="fontSize" title="Font size">
+        <option value="3">Normal</option>
+        <option value="1">10pt</option>
+        <option value="2">12pt</option>
+        <option value="4">16pt</option>
+        <option value="5">18pt</option>
+        <option value="6">24pt</option>
+      </select>
+    </div>
+
+    <div class="group">
+      <input type="color" id="foreColor" title="Text color" />
+      <input type="color" id="hiliteColor" title="Highlight color" />
+    </div>
+
+    <div class="group">
+      <button type="button" data-cmd="justifyLeft" title="Align left">⟵</button>
+      <button type="button" data-cmd="justifyCenter" title="Center">≡</button>
+      <button type="button" data-cmd="justifyRight" title="Align right">⟶</button>
+      <button type="button" data-cmd="justifyFull" title="Justify">▭</button>
+    </div>
+
+    <div class="group">
+      <button type="button" data-cmd="insertUnorderedList" title="Bulleted list">•</button>
+      <button type="button" data-cmd="insertOrderedList" title="Numbered list">1.</button>
+      <button type="button" data-cmd="outdent" title="Outdent">◂</button>
+      <button type="button" data-cmd="indent" title="Indent">▸</button>
+    </div>
+
+    <div class="group">
+      <button id="createLink" title="Insert link">🔗</button>
+      <button id="insertImage" title="Insert image">🖼️</button>
+    </div>
+
+    <div class="group">
+      <button id="undo" title="Undo">↶</button>
+      <button id="redo" title="Redo">↷</button>
+    </div>
+
+    <div class="group file-group">
+      <input type="file" id="fileInput" accept=".html,.htm,.txt" />
+      <button id="downloadHtml">Download .html</button>
+      <button id="downloadDoc">Download .doc</button>
+      <button id="downloadTxt">Download .txt</button>
+      <button id="printBtn">Print</button>
+    </div>
+  </div>
+
+  <main>
+    <div id="editor" contenteditable="true" spellcheck="true" aria-label="Document editor">
+      <h1>Untitled document</h1>
+      <p>Start typing here...</p>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
